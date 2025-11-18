@@ -12,12 +12,15 @@ All 25 day directories are already set up and ready to use!
 
 2. **Implement your solution** in `src/dayXX/solution.cpp`:
    ```cpp
-   long long part1(const string &data) {
-       // Your solution here
+   long long part1(const vector<string> &lines) {
+       // Iterate through lines
+       for (const string& line : lines) {
+           // Your solution here
+       }
        return 0;
    }
    
-   long long part2(const string &data) {
+   long long part2(const vector<string> &lines) {
        // Your solution here
        return 0;
    }
@@ -55,8 +58,8 @@ make clean      # Removes all compiled binaries
 Available in `utils/helpers.h`: 
 
 ```cpp
-// Read entire file as a single string
-string data = readInput("src/day01/input.txt");
+// Read file as vector of lines
+vector<string> lines = readLines("src/day01/input.txt");
 
 // Split string by char delimiter
 vector<string> parts = split("1,2,3", ',');
@@ -73,7 +76,7 @@ string clean = trim("  hello  "); // "hello"
 - **Test first**: Use `make test 1` with example input before running the full input
 - **Debug output**: Add `cout` statements for debugging, they'll show in the terminal
 - **Large numbers**: Use `long long` for return types (handles up to ~9 quintillion)
-- **Input parsing**: The `readInput()` function preserves newlines - use `split()` to parse lines
+- **Input parsing**: The `readLines()` function returns a vector of lines - iterate with a for loop
 
 ## Project Structure
 

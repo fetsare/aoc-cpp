@@ -39,17 +39,18 @@ inline std::string trim(const std::string& str) {
     return str.substr(first, (last - first + 1));
 }
 
-inline std::string readInput(const std::string& filename) {
+inline std::vector<std::string> readLines(const std::string& filename) {
     std::ifstream file(filename);
     if (!file.is_open()) {
         std::cerr << "Error: Could not open file " << filename << std::endl;
         exit(1);
     }
-    std::string content, line;
+    std::vector<std::string> lines;
+    std::string line;
     while (std::getline(file, line)) {
-        content += line + "\n";
+        lines.push_back(line);
     }
-    return content;
+    return lines;
 }
 
 #endif //HELPERS_H
