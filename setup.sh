@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# you dont have to use this!
+
 mkdir -p bin src
 
 for day in {1..25}; do

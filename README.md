@@ -1,6 +1,6 @@
-# Advent of Code 2025 - C++ Template
+# Advent of Code - C++ Template
 
-A streamlined C++ template for solving Advent of Code problems with automatic project structure setup and a powerful Makefile.
+A streamlined C++ template for solving Advent of Code problems
 
 ## Quick Start
 
@@ -58,15 +58,14 @@ Available in `utils/helpers.h`:
 // Read entire file as a single string
 string data = readInput("src/day01/input.txt");
 
-// Split string by delimiter
+// Split string by char delimiter
 vector<string> parts = split("1,2,3", ',');
+
+// Split string by string delimiter
+vector<string> parts = split("1   3", "   ");
 
 // Trim whitespace
 string clean = trim("  hello  "); // "hello"
-
-// Convert to int/long long
-int num = toInt("42");
-long long big = toLong("9999999999");
 ```
 
 ## Tips
@@ -89,3 +88,4 @@ The `setup.sh` script is included if you need to regenerate the structure.
 
 - C++ compiler with C++14 support (g++-14 or compatible)
 - Make
+- Patience :)

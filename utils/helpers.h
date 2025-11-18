@@ -39,14 +39,6 @@ inline std::string trim(const std::string& str) {
     return str.substr(first, (last - first + 1));
 }
 
-inline int toInt(const std::string& str) {
-    return std::stoi(str);
-}
-
-inline long long toLong(const std::string& str) {
-    return std::stoll(str);
-}
-
 inline std::string readInput(const std::string& filename) {
     std::ifstream file(filename);
     if (!file.is_open()) {
