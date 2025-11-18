@@ -4,24 +4,13 @@ A streamlined C++ template for solving Advent of Code problems with automatic pr
 
 ## Quick Start
 
-### Initial Setup
+All 25 day directories are already set up and ready to use!
 
-1. **Run the setup script** to create all 25 day directories:
-   ```bash
-   ./setup.sh
-   ```
-   
-   This creates:
-   - `src/day01/` through `src/day25/` directories
-   - Each with `solution.cpp`, `input.txt`, and `test_input.txt`
-   - `bin/` directory for compiled binaries
-   - `utils/` directory with helper functions
-
-2. **Add your puzzle input**:
+1. **Add your puzzle input**:
    - Paste the full input into `src/dayXX/input.txt`
    - Paste the example input into `src/dayXX/test_input.txt`
 
-3. **Implement your solution** in `src/dayXX/solution.cpp`:
+2. **Implement your solution** in `src/dayXX/solution.cpp`:
    ```cpp
    long long part1(const string &data) {
        // Your solution here
@@ -63,7 +52,7 @@ make clean      # Removes all compiled binaries
 ```
 ## Helper Functions
 
-Available in `utils/helpers.h`:
+Available in `utils/helpers.h`: 
 
 ```cpp
 // Read entire file as a single string
@@ -87,9 +76,16 @@ long long big = toLong("9999999999");
 - **Large numbers**: Use `long long` for return types (handles up to ~9 quintillion)
 - **Input parsing**: The `readInput()` function preserves newlines - use `split()` to parse lines
 
+## Project Structure
+
+All day directories (`src/day01/` through `src/day25/`) are pre-created with:
+- `solution.cpp` - Template for your solution
+- `input.txt` - For your full puzzle input
+- `test_input.txt` - For example/test input
+
+The `setup.sh` script is included if you need to regenerate the structure.
+
 ## Requirements
 
 - C++ compiler with C++14 support (g++-14 or compatible)
 - Make
-- Bash (for setup script)
-
