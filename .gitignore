@@ -1,0 +1,19 @@
+bin/
+*.o
+*.exe
+*.out
+a.out
+
+#IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+#OS
+.DS_Store
+Thumbs.db
+
+# Personal input files (optional, uncomment if you don't want to commit inputs)
+# */input.txt
